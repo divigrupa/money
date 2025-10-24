@@ -30,7 +30,7 @@ use const PHP_ROUND_HALF_UP;
 /**
  * Money Value Object.
  */
-final class Money implements JsonSerializable
+class Money implements JsonSerializable
 {
     use MoneyFactory;
 
