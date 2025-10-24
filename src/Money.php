@@ -479,13 +479,8 @@ class Money implements JsonSerializable
     {
         return self::$calculator::compare($this->amount, '0') < 0;
     }
-
-    /**
-     * {@inheritDoc}
-     *
-     * @phpstan-return array{amount: string, currency: string}
-     */
-    public function jsonSerialize(): array
+   
+    public function jsonSerialize(): mixed
     {
         return [
             'amount' => $this->amount,
